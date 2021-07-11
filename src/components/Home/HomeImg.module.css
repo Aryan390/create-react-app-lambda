@@ -1,0 +1,32 @@
+.imageSection{
+  width: 20%;
+  position: relative;
+}
+
+.imageSection img{
+  border: 1px solid rgb(145, 145, 145);
+  box-shadow: 0 2px 15px 3px rgba(255, 255, 255, 0.089),
+              0 2px 15px 5px rgba(0, 0, 0, 0.568);
+}
+
+.first{
+  width: 100%;
+  height: auto;
+}
+
+.second{
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  bottom: -5%;
+  left: -50%;
+  transform: translateX(50%);
+  width: 50%;
+  height: auto;
+}
+
+@media (max-width: 700px){
+  .imageSection{
+    width: 50%;
+  }
+}

@@ -1,0 +1,20 @@
+.socialIcons{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: .8rem;
+}
+
+.icon{
+  margin-right: .5rem;
+}
+
+.icon a{
+  height: 100%;
+  width: 100%;
+}
+
+.icon a svg{
+  font-size: 1.7rem;
+  color: rgb(46, 46, 46);
+}

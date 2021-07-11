@@ -1,24 +1,67 @@
-import logo from './logo.svg';
+import { Route, Switch, Redirect, useLocation } from 'react-router-dom';
+import { Fragment, useState } from 'react';
+import { TransitionGroup, CSSTransition } from 'react-transition-group'
+
+import HomePage from './pages/HomePage/HomePage';
+import ContactPage from './pages/ContactPage/ContactPage';
+import AboutPage from './pages/AboutPage/AboutPage';
+import ResumePage from './pages/ResumePage/ResumePage'
+import Footer from './components/Footer/Footer';
+
+import NavIcon from './components/Home/NavIcon';
+import Navigation from './components/Navigation/Navigation';
+import Backdrop from './components/UI/Backdrop/Backdrop'
+
 import './App.css';
 
 function App() {
+  const [navShown, setIsNavShown] = useState(false)
+
+  const location = useLocation();
+
+  const navClickHandler = () => {
+    setIsNavShown(prevState => !prevState)
+  }
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <Fragment>
+      <NavIcon onShow={navClickHandler} />
+      {navShown && <Backdrop onClose={navClickHandler} />}
+      {navShown && <Navigation onClose={navClickHandler} />}
+      
+      <TransitionGroup>
+        <CSSTransition
+          timeout={300}
+          classNames='fade'
+          key={location.key}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          <Switch location={location}>
+            <Route path='/' exact>
+              <Redirect to="/home" />
+            </Route>
+
+            <Route path="/home">
+              <HomePage />
+            </Route>
+
+            <Route path='/about'>
+              <AboutPage />
+            </Route>
+
+            <Route path='/resume'>
+              <ResumePage />
+            </Route>
+
+            <Route path='/contact'>
+              <ContactPage />
+            </Route>
+          </Switch>
+        </CSSTransition>
+      </TransitionGroup>
+
+      <Footer />
+    </Fragment>
   );
 }
 

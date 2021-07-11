@@ -1,0 +1,61 @@
+.boss{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(270deg,
+   rgb(32, 32, 32), 
+   rgb(29, 29, 29));
+  position: relative;
+  z-index: 20;
+  padding-top: 2rem;
+}
+
+.boss h3{
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: rgb(150, 150, 150);
+  font-family: 'Roboto Mono', monospace;
+}
+
+.boss h2{
+  font-size: 4rem;
+  font-weight: bolder;
+  color: rgb(150, 150, 150);
+  text-transform: uppercase;
+  font-family: 'Roboto Mono', monospace;
+  margin-bottom: 2rem;
+}
+
+.container{
+  width: 100%;
+  height: 65%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.borderLine{
+  height: 200px;
+  width: 3px;
+  background: rgb(150, 150, 150);
+  margin: 0 3rem;
+}
+
+@media (max-width: 1000px){
+  .borderLine{
+    height: 0;
+    width: 0;
+    margin: 0;
+  }
+  .boss h3{
+    margin-top: 2rem;
+  }
+
+  .container{
+    flex-direction: column;
+  }
+}

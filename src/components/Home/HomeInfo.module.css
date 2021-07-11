@@ -1,0 +1,53 @@
+.information{
+  width: 40%;
+}
+
+.btnSection{
+  margin: 1.5rem 0;
+}
+
+.btn{
+  padding: 1rem 1.5rem;
+  font-size: 1.2rem;
+  margin-right: .7rem;
+  cursor: pointer;
+  border-radius: 8px;
+  border: none;
+  transition: all .2s ease-in;
+  box-shadow: 0 2px 10px 2px rgba(255, 255, 255, 0.123);
+}
+
+.contactBtn{
+  background: rgb(184, 176, 176);
+  color: black;
+  border: 1px solid rgb(53, 53, 53);
+}
+
+.aboutBtn{
+  background: transparent;
+  border: 1px solid rgb(184, 176, 176);
+  color:rgb(184, 176, 176);
+}
+
+.aboutBtn:hover{
+  background:rgb(184, 176, 176);
+  color: black;
+  border: 1px solid black;
+}
+
+.information h2{
+  margin-bottom: .5rem;
+  font-size: 2rem;
+  font-family: 'Yomogi', cursive;
+}
+
+.information p{
+  font-size: 1.1rem;
+  line-height: 1.5rem;
+}
+
+@media (max-width: 700px){
+  .information{
+    width: 100%;
+  }
+}

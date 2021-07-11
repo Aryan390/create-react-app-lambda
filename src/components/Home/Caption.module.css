@@ -1,0 +1,25 @@
+.container{
+  width: 50%;
+  text-align: center;
+}
+
+.container h2{
+  margin-bottom: .5rem;
+  font-weight: lighter;
+}
+
+.container h1{
+  margin-bottom: 2rem;
+}
+
+.container p{
+  font-family: 'Yomogi', cursive;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+@media (max-width: 600px ){
+  .container p{
+    font-size: .9rem;
+  }
+}

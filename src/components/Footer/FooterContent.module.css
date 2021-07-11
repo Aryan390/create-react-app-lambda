@@ -1,0 +1,31 @@
+.footerContact{
+  background: rgb(44, 44, 44);
+  color: rgb(185, 185, 185);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: .5rem 0;
+  border-radius: 10px;
+}
+
+.footerContact h3{
+  font-size: .8rem;
+  font-weight: lighter;
+}
+
+.contactBtn{
+  margin: 1rem;
+  padding: .5rem;
+  background: rgb(202, 198, 198);
+  color: black;
+  border: none;
+  border-radius: 5px;
+  transition: all .4s ease-in-out;
+  cursor: pointer;
+}
+
+.contactBtn:hover{
+  color: rgb(202, 198, 198);
+  background: rgb(15, 15, 15);
+}

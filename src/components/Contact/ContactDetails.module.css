@@ -1,0 +1,9 @@
+.dataContainer{
+  width: 35%;
+}
+
+@media (max-width: 1000px){
+  .dataContainer{
+    width: 87%;
+  }
+}

@@ -1,0 +1,12 @@
+.skills{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container{
+  background: linear-gradient(180deg, 
+  rgb(41, 41, 41), 
+  rgb(32, 32, 32));
+  height: 100%;
+  padding: 1rem;
+}
